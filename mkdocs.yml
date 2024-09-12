@@ -3,11 +3,17 @@ site_url: https://sujithq.github.io/musical-octo-blog/
 
 extra_css:
   - stylesheets/extra.css
-
+  - stylesheets/neoteroi-cards.css
+  - stylesheets/neoteroi-gantt.css
+  - stylesheets/neoteroi-mkdocs.css
+  - stylesheets/neoteroi-spantable.css
+  - stylesheets/neoteroi-timeline.css
 theme:
   name: material 
   features:
-#     - navigation.indexes
+     - navigation.indexes
+  icon:
+    annotation: material/arrow-right-circle
 
 plugins:
   - search
@@ -17,7 +23,6 @@ plugins:
       post_slugify_separator: _
       post_url_format: "{date}/{slug}"
       post_date_format: full
-      post_excerpt: required
       post_excerpt_max_authors: 2
       post_excerpt_max_categories: 2
       post_excerpt_max_words: 20
@@ -31,16 +36,24 @@ plugins:
       authors_profiles: true
       authors_profiles_toc: true
       authors_profiles_url_format: "author/{slug}"
+  - neoteroi.contribs
 
 markdown_extensions:
-  - pymdownx.superfences
-  - pymdownx.tabbed
-  - pymdownx.details
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist
-  - pymdownx.smartsymbols
   - pymdownx.mark
   - pymdownx.critic
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.smartsymbols
   - pymdownx.superfences
+  - tables
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - neoteroi.timeline
+  
