@@ -1,1 +1,46 @@
 site_name: My Docs
+site_url: https://sujithq.github.io/musical-octo-blog/
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material 
+  features:
+#     - navigation.indexes
+
+plugins:
+  - search
+  - blog:
+      blog_toc: true
+      post_excerpt: required
+      post_slugify_separator: _
+      post_url_format: "{date}/{slug}"
+      post_date_format: full
+      post_excerpt: required
+      post_excerpt_max_authors: 2
+      post_excerpt_max_categories: 2
+      post_excerpt_max_words: 20
+      post_excerpt_max_lines: 3
+      post_excerpt_max_characters: 100
+      categories_allowed:
+        - Hello
+        - World
+        - There
+      authors_file: "{blog}/.authors.yml"
+      authors_profiles: true
+      authors_profiles_toc: true
+      authors_profiles_url_format: "author/{slug}"
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.tasklist
+  - pymdownx.smartsymbols
+  - pymdownx.mark
+  - pymdownx.critic
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
