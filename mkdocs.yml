@@ -36,8 +36,23 @@ plugins:
       authors_profiles: true
       authors_profiles_toc: true
       authors_profiles_url_format: "author/{slug}"
-  - neoteroi.contribs
-
+  - neoteroi.contribs:
+  - glightbox:
+      touchNavigation: true
+      loop: true
+      effect: zoom
+      slide_effect: slide
+      width: auto
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_caption: true
+      caption_position: bottom
+      background: white
+      shadow: true
+      manual: false
 markdown_extensions:
   - admonition
   - attr_list
